@@ -8,10 +8,6 @@ export class UiRenderService implements OnModuleInit {
   async onModuleInit(): Promise<void> {
     this.server = next({
       dev: process.env.NODE_ENV !== 'production',
-      dir: './src',
-      conf: {
-        distdir: './.next',
-      },
     });
     await this.server.prepare();
   }
