@@ -7,10 +7,11 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "npm run build:next && npm run build:nest",
     "build:next": "next build",
+    "build:nest": "nest build --path ./tsconfig.server.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "NODE_ENV=production node dist/server/main.js",
     "start:dev": "NODE_ENV=development nest start --watch --path tsconfig.server.json",
     "start:debug": "nest start --debug --watch",
     "start:next": "next dev",
