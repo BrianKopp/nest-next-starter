@@ -1,7 +1,10 @@
-import React, { FC } from 'react';
+import HeaderFooterResponsive from '@layouts/HeaderFooterResponsive';
+import React from 'react';
 
-const Home: FC = () => {
-  return <h1 className="text-3xl font-bold underline">Home</h1>;
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <HeaderFooterResponsive>
+      <p>Some main content</p>
+    </HeaderFooterResponsive>
+  );
+}
