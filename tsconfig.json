@@ -25,7 +25,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "strict": false,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@components/*": ["src/client/components/*"],
+      "@layouts/*": ["src/client/layouts/*"],
+      "@server/*": ["src/server/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["**/*.spec.*", "node_modules", "test/**/*"]
